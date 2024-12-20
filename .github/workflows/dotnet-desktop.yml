@@ -19,7 +19,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '4.0.0' # Oder die Version, die du benötigst
+        dotnet-version: '8.0' # Oder die Version, die du benötigst
 
     - name: Restore dependencies
       run: dotnet restore Certify.sln
