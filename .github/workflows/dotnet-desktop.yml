@@ -15,7 +15,14 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+      
+    - name: Install .NET Framework 4.0 Targeting Pack
+      run: |
+        choco install dotnet4.0-targetpack -y
 
+    - name: Build solution
+      run: msbuild Certify.sln /p:Configuration=Release
+      
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
